@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movie_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2m9-Qq-mfB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-G1-EHo">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Database" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvB-fQ-G8x">
+                                        <rect key="frame" x="0.0" y="57" width="393" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <searchBar contentMode="redraw" placeholder="Search Title , Actor,Movie Name, Gence" translatesAutoresizingMaskIntoConstraints="NO" id="kPZ-Nc-ryz">
+                                        <rect key="frame" x="0.0" y="81" width="393" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="dkr-Gq-5w7"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gHE-WG-qWs">
+                                        <rect key="frame" x="0.0" y="136" width="393" height="716"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.80213647960000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kPZ-Nc-ryz" secondAttribute="trailing" id="1dh-nD-YZv"/>
+                                    <constraint firstAttribute="trailing" secondItem="gHE-WG-qWs" secondAttribute="trailing" id="3rv-ok-7cC"/>
+                                    <constraint firstAttribute="trailing" secondItem="qvB-fQ-G8x" secondAttribute="trailing" id="47q-tv-otO"/>
+                                    <constraint firstItem="kPZ-Nc-ryz" firstAttribute="top" secondItem="qvB-fQ-G8x" secondAttribute="bottom" id="9CN-WR-tVQ"/>
+                                    <constraint firstItem="gHE-WG-qWs" firstAttribute="leading" secondItem="Tse-G1-EHo" secondAttribute="leading" id="Evv-e7-EYU"/>
+                                    <constraint firstAttribute="bottom" secondItem="gHE-WG-qWs" secondAttribute="bottom" id="Lgz-80-4af"/>
+                                    <constraint firstItem="qvB-fQ-G8x" firstAttribute="top" secondItem="Tse-G1-EHo" secondAttribute="top" constant="57" id="Uev-Ap-Css"/>
+                                    <constraint firstItem="gHE-WG-qWs" firstAttribute="top" secondItem="kPZ-Nc-ryz" secondAttribute="bottom" id="hQC-Wo-9YV"/>
+                                    <constraint firstItem="qvB-fQ-G8x" firstAttribute="leading" secondItem="Tse-G1-EHo" secondAttribute="leading" id="teL-yI-nnr"/>
+                                    <constraint firstItem="kPZ-Nc-ryz" firstAttribute="leading" secondItem="Tse-G1-EHo" secondAttribute="leading" id="zVp-qs-Zh7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="02m-S5-jLH"/>
+                        <color key="backgroundColor" white="1" alpha="0.80213647960000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tse-G1-EHo" firstAttribute="top" secondItem="2m9-Qq-mfB" secondAttribute="top" id="2jW-Bi-OZe"/>
+                            <constraint firstItem="02m-S5-jLH" firstAttribute="trailing" secondItem="Tse-G1-EHo" secondAttribute="trailing" id="QdM-dE-sD1"/>
+                            <constraint firstItem="Tse-G1-EHo" firstAttribute="leading" secondItem="02m-S5-jLH" secondAttribute="leading" id="RBw-aG-juS"/>
+                            <constraint firstAttribute="bottom" secondItem="Tse-G1-EHo" secondAttribute="bottom" id="UMQ-fa-K63"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainContainerView" destination="Tse-G1-EHo" id="LP3-YZ-1Dg"/>
+                        <outlet property="movieDatabaseLbl" destination="qvB-fQ-G8x" id="Hip-DQ-OvA"/>
+                        <outlet property="searchBar" destination="kPZ-Nc-ryz" id="h8G-aJ-jZ8"/>
+                        <outlet property="tableView" destination="gHE-WG-qWs" id="ypG-Yy-nQM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
